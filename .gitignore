@@ -1,0 +1,6 @@
+.DS_Store
+*.tmproj
+*.sqlite3
+log/*.log
+tmp/*
+tmp/**/*
