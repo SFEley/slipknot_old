@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  type: MyString
+  cents: 1
+  donor_id: 1
+
+two:
+  type: MyString
+  cents: 1
+  donor_id: 1

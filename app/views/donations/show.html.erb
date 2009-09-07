@@ -1,0 +1,18 @@
+<p>
+  <b>Type:</b>
+  <%=h @donation.type %>
+</p>
+
+<p>
+  <b>Cents:</b>
+  <%=h @donation.cents %>
+</p>
+
+<p>
+  <b>Donor:</b>
+  <%=h @donation.donor_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_donation_path(@donation) %> |
+<%= link_to 'Back', donations_path %>
