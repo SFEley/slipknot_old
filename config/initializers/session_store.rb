@@ -6,7 +6,7 @@
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
   :key         => '_slipknot_session',
-  :secret      => '17582d7b98f90a94c21d01b6c5cb590d8a4eaaa8c80dedaefe35b2480e869a4740d4da2cc357dc3929a48393b15c6a86e3e282fe60f161290d3ceb96ac772e82'
+  :secret      => 'dbae6c0ef99f79091411cbee27e2231826e50165faf315c44ff7f26be7315af5f0ed5fbde938a67ba26365a4718437107b207a327c2aac3b22c7a59710d22ae9'
 }
 
 # Use the database for sessions instead of the cookie-based default,
