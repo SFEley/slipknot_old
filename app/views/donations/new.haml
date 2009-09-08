@@ -1,0 +1,46 @@
+%h1 Support Escape Artists!
+
+%p
+  %strong Yes,
+  I'm a fabulous person and I want to help these short story podcasts succeed.  I understand that my
+  donation supports the authors and production staff of Escape Artists, Inc., and that my email address
+  and other personal information will never
+  %em ever
+  be shared with other third parties, except to enable this payment.
+  
+- form_for @donation do |donation|
+  = donation.error_messages
+  
+  - donation.fields_for :donor do |donor|
+    %p
+      = donor.label :name, "My name:"
+      %br
+      = donor.text_field :name
+    %p
+      = donor.label :email, "My email:"
+      %br
+      = donor.text_field :email
+      
+  %p 
+    I want to donate: $
+    = donation.text_field :cents, :size => 5
+    %br
+    = donation.radio_button :type, "Onetime"
+    \...as a one-time donation.
+    %br
+    = donation.radio_button :type, "Subscription"
+    \...as a monthly recurring subscription.
+    
+  %p 
+    I would like my donation to support:
+    %br
+    = check_box_tag "donation[podcasts][]", "Escape Pod", true
+    = link_to "Escape Pod", "http://escapepod.org"
+    %br
+    = check_box_tag "donation[podcasts][]", "PodCastle", true
+    = link_to "PodCastle", "http://podcastle.org"
+    %br
+    = check_box_tag "donation[podcasts][]", "Pseudopod", true
+    = link_to "Pseudopod", "http://pseudopod.org"
+    
+  = donation.submit
