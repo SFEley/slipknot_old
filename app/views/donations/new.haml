@@ -25,14 +25,17 @@
     = donation.label :amount, "I want to donate: $"
     = donation.text_field :amount, :size => 6
     %br
-    = donation.radio_button :type, "Onetime"
-    \...as a one-time donation.
+    = donation.radio_button :type, "OnetimeDonation"
+    = donation.label :type, "...as a one-time donation.", :value => "OnetimeDonation"
     %br
-    = donation.radio_button :type, "Subscription"
-    \...as a monthly recurring subscription.
+    = donation.radio_button :type, "RecurringDonation"
+    = donation.label :type, "...as a monthly recurring subscription.", :value => "RecurringDonation"
     
   %p 
     I would like my donation to support:
+    - for podcast in @podcasts
+      = check_box_tag "donation[podcast_ids][]", podcast.id, support_this?(podcast)
+      
     %br
     = check_box_tag "donation[podcasts][]", "Escape Pod", true
     = link_to "Escape Pod", "http://escapepod.org"

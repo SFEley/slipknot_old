@@ -24,6 +24,7 @@ class DonationsController < ApplicationController
   # GET /donations/new
   # GET /donations/new.xml
   def new
+    @podcasts = Podcast.all  # Populate those checkboxes
     @donation = Donation.new
 
     respond_to do |format|

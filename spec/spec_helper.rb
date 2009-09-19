@@ -5,7 +5,7 @@ Spork.prefork do
   # This file is copied to ~/spec when you run 'ruby script/generate rspec'
   # from the project root directory.
   ENV["RAILS_ENV"] ||= 'test'
-  require File.dirname(__FILE__) + "/../config/environment"
+  require File.expand_path('../config/environment', File.dirname(__FILE__))  
   require 'spec/autorun'
   require 'spec/rails'
 end
