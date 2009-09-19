@@ -17,13 +17,13 @@
       %br
       = donor.text_field :name
     %p
-      = donor.label :email, "My email:"
+      = donor.label :email, "My email address:"
       %br
       = donor.text_field :email
       
   %p 
-    I want to donate: $
-    = donation.text_field :cents, :size => 5
+    = donation.label :amount, "I want to donate: $"
+    = donation.text_field :amount, :size => 6
     %br
     = donation.radio_button :type, "Onetime"
     \...as a one-time donation.
